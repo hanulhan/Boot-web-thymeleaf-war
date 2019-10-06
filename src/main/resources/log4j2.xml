@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="WARN" monitorInterval="30">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c.%M:%L - %m%n"/>
+        </Console>
+
+        <!--
+        <RollingFile name="communication" fileName="${log4j.logpath}/communication.log"
+                     filePattern="${log4j.logpath}/communication-%d{MM-dd-yyyy}-%i.log">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c.%M:%L - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="2"/>
+        </RollingFile>
+        -->
+
+    </Appenders>
+
+    <Loggers>
+
+
+        <!--
+        <Logger name="com.acentic.cloudservices.hotel.SystemHotel.beans.SystemIdentResolverProxy" level="${log4j.cloudservices.communication}">
+            <AppenderRef  ref="communication" />
+        </Logger>
+        -->
+        <!--
+        <Logger name="org.springframework" level="${log4j.org.springframework}"/>
+        <Logger name="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" level="INFO"/>
+        <Logger name="org.hibernate" level="${log4j.org.hibernate}"/>
+        <Logger name="com.mchange" level="${log4j.com.mchange}"/>
+        <Logger name="org.apache.struts2" level="${log4j.org.apache.struts2}"/>
+        <Logger name="org.apache.struts2.config" level="${log4j.org.apache.struts2.config}"/>
+        <Logger name="org.glassfish.jersey" level="${log4j.comsun.jersey}"/>        
+        -->
+        <Logger name="com.hanulhan" level="DEBUG"/>
+        <Root level="INFO">
+            <AppenderRef  ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>
